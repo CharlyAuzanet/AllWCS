@@ -1,0 +1,24 @@
+ConvertBundle\Entity\Panier:
+    type: entity
+    table: null
+    repositoryClass: ConvertBundle\Repository\PanierRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+            column: Nom
+        quantite:
+            type: integer
+            column: Quantite
+        prix:
+            type: integer
+            column: Prix
+        tva:
+            type: integer
+    lifecycleCallbacks: {  }

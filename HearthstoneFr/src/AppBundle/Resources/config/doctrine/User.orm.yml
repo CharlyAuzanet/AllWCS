@@ -1,0 +1,22 @@
+AppBundle\Entity\User:
+    type: entity
+    table: fos_user
+    repositoryClass: AppBundle\Repository\UserRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        pseudo:
+            type: string
+            length: '20'
+            unique: true
+            column: Pseudo
+        battleTag:
+            type: string
+            length: 255
+            unique: true
+            column: BattleTag
+    lifecycleCallbacks: {  }

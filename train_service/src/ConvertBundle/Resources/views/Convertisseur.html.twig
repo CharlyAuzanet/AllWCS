@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h1>Calculateur de TVA</h1>
+    {{ form(form) }}
+
+    <table>
+        <tr>
+            <td>Nom</td>
+            <td>Ht</td>
+            <td>TTC</td>
+        </tr>
+        {% if result is defined %}
+        <tr>
+            <td>{{ result.nom}}</td>
+            <td>{{ result.ht}}</td>
+            <td>{{ result.ttc}}</td>
+        </tr>
+            {% endif %}
+    </table>
+
+
+{% endblock %}
